@@ -1,0 +1,15 @@
+void helper(string s,string tempAns,int index){
+    if(s.size()==index)
+    {
+        cout<<tempAns<<" ";
+        return;
+    }
+    helper(s,tempAns+s[index],index+1);
+    helper(s,tempAns,index+1);
+    return;
+}
+vector<string>AllPossibleString(string s){
+    vector<string>ans;
+    helper(s,"",0);
+    return ans;
+}
